@@ -1,15 +1,20 @@
 //para que se espere a que se cargue todo el html
 document.addEventListener("DOMContentLoaded", function() {
+    const ERROR = document.getElementById("error");
     //referencia al elemento del formulario
     let formulario = document.getElementById("calculoForm");
-
     formulario.addEventListener("submit", function(event) {
         // para que no recargue la pagina
         event.preventDefault();
-
+        
         // peso del usuario obtenido del campo con el id calcular
         let peso = document.getElementById("calcular").value;
-
+        // mostrar error en el caso de no completar los datos del peso
+        if (peso > 0){
+            ERROR.style.display = 'none'
+        } else {
+            ERROR.style.display = 'block';
+        }
         //switch para elegir que funcion usar dependiendo del peso total
         if (peso) {  
             // Evaluar el peso y llamar a la función que corresponda
@@ -46,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let horas = 24;
         let mantenimiento = (volumen / horas).toFixed(2);
         let calculoTotal = (mantenimiento * 1.5).toFixed(2);
-        alert("Volumen Diario: " + volumen + " cc" + "\n" + "Flujo Horario: " + mantenimiento + " cc/h" + "\n" + "m+m/2: : " + calculoTotal + " cc/h");
+        alert("Volumen Diario: " + volumen + " cc" + "\n" +" "+ "Flujo Horario: " + mantenimiento + " cc/h" + "\n" +" "+ "m+m/2: " + calculoTotal + " cc/h");
     };
 //funcion superficie corporal
     const calculoSuperficieCorporal = function (peso) {
