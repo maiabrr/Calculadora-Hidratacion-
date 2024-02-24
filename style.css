@@ -1,6 +1,4 @@
-h1 {
-    color: blue;
-  }
+
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
   body{
@@ -29,7 +27,7 @@ h1 {
     float: left;
 }
 #detalle{
-    background: #FF416C;
+    background: #4193ff;
     /* Con estas 3 lineas vamos a hacer que los divs queden lado a lado */
     width: 50%;
     height: 100%;
@@ -47,17 +45,21 @@ h1 {
 input {
 	width: 70%;
     padding: 12px 15px;
+    font-family: 'Montserrat';
+    color: black;
+    font-weight: bolder;
     border: none;
     background-color: #eee;
 }
 
 button {
   font-size: 15px;
+    font-family: 'Montserrat';
 	font-weight: bold;
-	padding: 12px 45px;
+	padding: 12px 40px;
 	border-radius: 30px;
-	background-color: #FF416C;
-	border: 1px solid #FF416C;
+	background-color: #415eff;
+	border: 1px solid #415eff;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -73,10 +75,9 @@ button:active {
     display: none;
 }
 
-.resultado{
-    color: #0A81D1;
+#resultadoHidratacion, #resultadoSuperficieCorporal {
     font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 5px;
-    display: none;
+    font-family: 'Montserrat';
+    color: #3E363F;
+    font-size: 1.2em; 
 }
