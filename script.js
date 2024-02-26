@@ -1,6 +1,9 @@
 //para que se espere a que se cargue todo el html
 document.addEventListener("DOMContentLoaded", function() {
+    //declarar constante error para el mensaje de validacion
     const ERROR = document.getElementById("error");
+    //declarar constante mensaje para los resultados
+    const MENSAJE= document.getElementById("resultadoHidratacion", "resultadoSuperficieCorporal");
     //referencia al elemento del formulario
     let formulario = document.getElementById("calculoForm");
     formulario.addEventListener("submit", function(event) {
@@ -12,8 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
         // mostrar error en el caso de no completar los datos del peso
         if (peso > 0){
             ERROR.style.display = 'none'
+            MENSAJE.style.display = 'block'
         } else {
-            ERROR.style.display = 'block';
+            ERROR.style.display = 'block'
+            MENSAJE.style.display = 'none'
         }
         //switch para elegir que funcion usar dependiendo del peso total
         if (peso) {  

@@ -81,4 +81,5 @@ button:active {
     font-family: 'Montserrat';
     color: #3E363F;
     font-size: 1.2em; 
+    display: block;
 }
